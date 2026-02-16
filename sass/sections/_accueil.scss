@@ -1,3 +1,32 @@
 /*--------------------------------------------------------------
 # Section accueil
 --------------------------------------------------------------*/
+
+#accueil {
+  height: 100vh;
+  width: 100vw;
+
+  #acc-description {
+
+    img {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+
+      background-color: var(--black);
+
+      z-index: 1;
+    }
+
+    #acc-text {
+      padding-top: 10vh;
+      height: 100vh;
+
+      background-color: rgba(132, 129, 112, 0.8);
+
+      z-index: 2
+    }
+  }
+
+
+}

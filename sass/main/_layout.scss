@@ -2,7 +2,7 @@
 # Mise en page du site
 --------------------------------------------------------------*/
 
-/* base */
+// #region base
 
 html {
   box-sizing: border-box;
@@ -11,6 +11,7 @@ html {
 
 *, *::before, *::after {
   box-sizing: border-box;
+  max-width: 100%;
 }
 
 :root {
@@ -23,24 +24,35 @@ body {
   font-size: var(--size-body);
   margin: 0 auto;
 }
+// #endregion base
 
 
 
-/* sections */
+// #region sections
 
 section {
-  --width: 90vw;
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 10vh;
 
   @media (min-width: 1025px) { // version pour écrans larges
-    --width: 80vw;
+    width: 80vw;
   }
 }
 
+footer {
+  margin-top: 10vh;
+  height: 20vh;
+}
+
+// #endregion sections
 
 
-/* liens */
+
+// #region liens
 
 a {
   text-decoration: none;
   color: var(--bc-light);
 }
+// #endregion liens

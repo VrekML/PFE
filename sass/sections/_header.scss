@@ -1,13 +1,16 @@
 /*--------------------------------------------------------------
-# Section histoire du projet et prototypes
+# Section header
 --------------------------------------------------------------*/
 
-#histoire {
+#header {
+  width: 100vw;
+  height: 5vh;
 
-  #historique {
+  background-color: var(--white);
 
-    .his-etape {
-      margin-right: 5vw;
-    }
+  z-index: 1000;
+
+  div {
+    height: 100%;
   }
 }

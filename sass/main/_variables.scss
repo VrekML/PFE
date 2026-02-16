@@ -1,8 +1,20 @@
 /*--------------------------------------------------------------
-# Variables de style
+# Variables
 --------------------------------------------------------------*/
 
-/* variables mise en page */
+// #region positions
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute
+}
+// #endregion positions
+
+// #region display
+
 .rangee {
   display: flex;
   flex-direction: row;
@@ -13,8 +25,46 @@
   flex-direction: column;
 }
 
+.center {
+  justify-content: center;
+  align-items: center;
+}
 
-/* variables couleurs */
+.center-h {
+  justify-content: center;
+}
+
+.center-v {
+  align-items: center;
+}
+// #endregion display
+
+// #region deplacer
+
+.left {
+  margin-right: auto;
+  left: 0;
+}
+
+.right {
+  margin-left: auto;
+  right: 0;
+}
+// #endregion deplacer
+
+// #region tailles
+
+.no-marg-top {
+  margin-top: 0;
+}
+
+.fifty {
+  width: 50%;
+}
+// #endregion tailles
+
+// #region variables couleurs
+
 :root {
   --black: rgb(34, 32, 30);
   --grey: rgb(71, 64, 52);
@@ -22,3 +72,4 @@
   --yellow-main: rgb(216, 181, 76);
   --orange-main: rgb(202, 151, 61);
 }
+// #endregion variables couleurs

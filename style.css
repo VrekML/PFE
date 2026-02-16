@@ -1,7 +1,6 @@
 /*--------------------------------------------------------------
 # Mise en page du site
 --------------------------------------------------------------*/
-/* base */
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -9,6 +8,7 @@ html {
 
 *, *::before, *::after {
   box-sizing: border-box;
+  max-width: 100%;
 }
 
 :root {
@@ -22,26 +22,38 @@ body {
   margin: 0 auto;
 }
 
-/* sections */
 section {
-  --width: 90vw;
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 10vh;
 }
 @media (min-width: 1025px) {
   section {
-    --width: 80vw;
+    width: 80vw;
   }
 }
 
-/* liens */
+footer {
+  margin-top: 10vh;
+  height: 20vh;
+}
+
 a {
   text-decoration: none;
   color: var(--bc-light);
 }
 
 /*--------------------------------------------------------------
-# Variables de style
+# Variables
 --------------------------------------------------------------*/
-/* variables mise en page */
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
 .rangee {
   display: flex;
   flex-direction: row;
@@ -52,7 +64,37 @@ a {
   flex-direction: column;
 }
 
-/* variables couleurs */
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.center-h {
+  justify-content: center;
+}
+
+.center-v {
+  align-items: center;
+}
+
+.left {
+  margin-right: auto;
+  left: 0;
+}
+
+.right {
+  margin-left: auto;
+  right: 0;
+}
+
+.no-marg-top {
+  margin-top: 0;
+}
+
+.fifty {
+  width: 50%;
+}
+
 :root {
   --black: rgb(34, 32, 30);
   --grey: rgb(71, 64, 52);
@@ -64,18 +106,57 @@ a {
 /*--------------------------------------------------------------
 # Section accueil
 --------------------------------------------------------------*/
+#accueil {
+  height: 100vh;
+  width: 100vw;
+}
+#accueil #acc-description img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  background-color: var(--black);
+  z-index: 1;
+}
+#accueil #acc-description #acc-text {
+  padding-top: 10vh;
+  height: 100vh;
+  background-color: rgba(132, 129, 112, 0.8);
+  z-index: 2;
+}
+
 /*--------------------------------------------------------------
 # Section demo du projet
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Section footer
 --------------------------------------------------------------*/
+#footer {
+  background-color: var(--black);
+}
+
 /*--------------------------------------------------------------
 # Section galerie d'images
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
+# Section header
+--------------------------------------------------------------*/
+#header {
+  width: 100vw;
+  height: 5vh;
+  background-color: var(--white);
+  z-index: 1000;
+}
+#header div {
+  height: 100%;
+}
+
+/*--------------------------------------------------------------
 # Section histoire du projet et prototypes
 --------------------------------------------------------------*/
+#histoire #historique .his-etape {
+  margin-right: 5vw;
+}
+
 /*--------------------------------------------------------------
 # Section reflexion finale
 --------------------------------------------------------------*//*# sourceMappingURL=style.css.map */

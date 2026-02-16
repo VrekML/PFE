@@ -11,29 +11,97 @@
   <!-- js -->
   <!-- <script src=""></script> -->
 </head>
-<body>
-  <header id="accueil">
 
+
+<body>
+  <header id="header" class="fixed">
+    <div class="rangee center">
+      <a href="#accueil"><h1>Arik ML</h1></a>
+      <nav id="nav">
+        <a href="#accueil">Accueil</a>
+        <a href="#demo">Démonstration</a>
+        <a href="#histoire">Histoire</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#reflexion">Réflexion</a>
+      </nav>
+    </div>
   </header>
 
-  <section id="demo">
+  <section id="accueil" class="no-marg-top">
+    <div id="acc-description" class="rangee">      
+      <img src="" alt="img">
+      <div id="acc-text" class="colonne fifty right absolute">
+        <p>description du projet</p>
+        <p>but du projet</p>
 
+        <div id="acc-btns">
+          <a href="#demo"><button>Voir le projet</button></a>
+          <a href=""><button>Télécharger le projet</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="demo">
+    <h2>Le projet en oeuvre</h2>
+      <!-- trouver comment faire du 3JS pour loader le modele simple maybe -->
+      <!-- trouver comment faire un lecteur video -->
   </section>
 
   <section id="histoire">
+    <h2>Le projet en étapes</h2>
+    <!-- formater avec une ligne du temps -->
+    <div id="historique" class="rangee">
+      <div class="his-etape colonne">
+        <h3>Debut 1</h3>
+        <p>description de ce qui s'est passé</p>
+      </div>
 
+      <div class="his-etape colonne">
+        <h3>Debut 2</h3>
+        <p>description de ce qui s'est passé</p>
+      </div>
+
+      <div class="his-etape colonne">
+        <h3>Debut 3</h3>
+        <p>description de ce qui s'est passé</p>
+      </div>
+    </div>
   </section>
 
   <section id="galerie">
-
+    <h2>Galerie d'images</h2>
+    <div id="gal-imgs">
+      <img src="" alt="img">
+      <img src="" alt="img">
+      <img src="" alt="img">
+      <img src="" alt="img">
+    </div>
   </section>
 
-  <section id="reflexion">
+  <section id="reflexion" class="colonne">
+    <h2>Réflexion sur le projet</h2>
 
+    <div id="ref-text">
+      <p>Ce que j'ai appris</p>
+      <p>Ce que j'aurais pu faire mieux</p>
+    </div>
+
+    <div id="ref-button">
+      <a href=""><button>Télécharger la course</button></a>
+    </div>
   </section>
 
-  <footer id="footer">
+  <footer id="footer" class="colonne center">
+    <div id="foot-socials" class="rangee center">
+      <a href=""><img src="" alt="1"></a>
+      <a href=""><img src="" alt="2"></a>
+      <a href=""><img src="" alt="3"></a>
+    </div>
 
+    <div id="credits" class="rangee center">
+      <p>Crédits</p>
+    </div>  
   </footer>
   
 </body>
