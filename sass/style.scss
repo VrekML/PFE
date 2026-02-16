@@ -6,8 +6,8 @@
 // main
 ////////////////
 
-@import  "main/layout.scss";
-@import "main/main.scss";
+@import "main/layout.scss";
+@import "main/variables.scss";
 
 ////////////////
 // sections
@@ -18,4 +18,4 @@
 @import "sections/footer.scss";
 @import "sections/galerie-images.scss";
 @import "sections/histoire-prototypes.scss";
-@import "sections/reflexions.scss";
+@import "sections/reflexion.scss";

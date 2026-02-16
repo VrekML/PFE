@@ -1,0 +1,81 @@
+/*--------------------------------------------------------------
+# Mise en page du site
+--------------------------------------------------------------*/
+/* base */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  font-family: var(--font);
+  font-size: var(--size-body);
+  margin: 0 auto;
+}
+
+/* sections */
+section {
+  --width: 90vw;
+}
+@media (min-width: 1025px) {
+  section {
+    --width: 80vw;
+  }
+}
+
+/* liens */
+a {
+  text-decoration: none;
+  color: var(--bc-light);
+}
+
+/*--------------------------------------------------------------
+# Variables de style
+--------------------------------------------------------------*/
+/* variables mise en page */
+.rangee {
+  display: flex;
+  flex-direction: row;
+}
+
+.colonne {
+  display: flex;
+  flex-direction: column;
+}
+
+/* variables couleurs */
+:root {
+  --black: rgb(34, 32, 30);
+  --grey: rgb(71, 64, 52);
+  --white: rgb(132, 129, 112);
+  --yellow-main: rgb(216, 181, 76);
+  --orange-main: rgb(202, 151, 61);
+}
+
+/*--------------------------------------------------------------
+# Section accueil
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Section demo du projet
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Section footer
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Section galerie d'images
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Section histoire du projet et prototypes
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Section reflexion finale
+--------------------------------------------------------------*//*# sourceMappingURL=style.css.map */

@@ -1,0 +1,24 @@
+/*--------------------------------------------------------------
+# Variables de style
+--------------------------------------------------------------*/
+
+/* variables mise en page */
+.rangee {
+  display: flex;
+  flex-direction: row;
+}
+
+.colonne {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* variables couleurs */
+:root {
+  --black: rgb(34, 32, 30);
+  --grey: rgb(71, 64, 52);
+  --white: rgb(132, 129, 112);
+  --yellow-main: rgb(216, 181, 76);
+  --orange-main: rgb(202, 151, 61);
+}

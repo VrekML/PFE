@@ -1,0 +1,46 @@
+/*--------------------------------------------------------------
+# Mise en page du site
+--------------------------------------------------------------*/
+
+/* base */
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  font-family: var(--font);
+  font-size: var(--size-body);
+  margin: 0 auto;
+}
+
+
+
+/* sections */
+
+section {
+  --width: 90vw;
+
+  @media (min-width: 1025px) { // version pour écrans larges
+    --width: 80vw;
+  }
+}
+
+
+
+/* liens */
+
+a {
+  text-decoration: none;
+  color: var(--bc-light);
+}
