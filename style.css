@@ -8,7 +8,6 @@ html {
 
 *, *::before, *::after {
   box-sizing: border-box;
-  max-width: 100%;
 }
 
 :root {
@@ -20,6 +19,10 @@ body {
   font-family: var(--font);
   font-size: var(--size-body);
   margin: 0 auto;
+}
+
+header, section, footer {
+  max-width: 100%;
 }
 
 section {
@@ -153,8 +156,15 @@ a {
 /*--------------------------------------------------------------
 # Section histoire du projet et prototypes
 --------------------------------------------------------------*/
+#histoire {
+  max-width: 300%;
+}
+#histoire #historique {
+  width: 300%;
+}
 #histoire #historique .his-etape {
   margin-right: 5vw;
+  width: 30%;
 }
 
 /*--------------------------------------------------------------
