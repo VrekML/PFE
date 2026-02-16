@@ -1,4 +1,7 @@
-# PFE
-Projet de fin d'études
+# Projet de fin d'études
+Arik Malenfant-Lacombe
 
-Regarder project pour plus d'infos
+Création d'une course personalisée pour le jeu vidéo Mario Kart Wii
+Création d'une page web de présentation
+
+Janvier - mars 2026

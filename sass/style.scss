@@ -1,0 +1,21 @@
+// site par Arik Malenfant-Lacombe
+// Projet de fin d'études, janvier - mars 2026
+// Site de présentation du projet
+
+////////////////
+// main
+////////////////
+
+@import  "main/layout.scss";
+@import "main/main.scss";
+
+////////////////
+// sections
+////////////////
+
+@import "sections/accueil.scss";
+@import "sections/demo.scss";
+@import "sections/footer.scss";
+@import "sections/galerie-images.scss";
+@import "sections/histoire-prototypes.scss";
+@import "sections/reflexions.scss";
