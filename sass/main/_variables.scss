@@ -3,7 +3,6 @@
 --------------------------------------------------------------*/
 
 // #region positions
-
 .fixed {
   position: fixed;
 }
@@ -14,7 +13,6 @@
 // #endregion positions
 
 // #region display
-
 .rangee {
   display: flex;
   flex-direction: row;
@@ -40,7 +38,6 @@
 // #endregion display
 
 // #region deplacer
-
 .left {
   margin-right: auto;
   left: 0;
@@ -53,7 +50,6 @@
 // #endregion deplacer
 
 // #region tailles
-
 .no-marg-top {
   margin-top: 0;
 }
@@ -64,7 +60,6 @@
 // #endregion tailles
 
 // #region variables couleurs
-
 :root {
   --black: rgb(34, 32, 30);
   --grey: rgb(71, 64, 52);

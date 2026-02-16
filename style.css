@@ -159,6 +159,9 @@ a {
 #histoire {
   max-width: 300%;
 }
+#histoire #his-bouton {
+  background-color: var(--white);
+}
 #histoire #historique {
   width: 300%;
 }
