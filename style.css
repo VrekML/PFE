@@ -116,8 +116,6 @@ a {
 #accueil #acc-description img {
   width: 100vw;
   height: 100vh;
-  object-fit: cover;
-  background-color: var(--black);
   z-index: 1;
 }
 #accueil #acc-description #acc-text {
