@@ -22,6 +22,9 @@ body {
   font-family: var(--font);
   font-size: var(--size-body);
   margin: 0 auto;
+
+  color: var(--white-text);
+  background-color: var(--dark);
 }
 // #endregion base
 
@@ -34,13 +37,10 @@ header, section, footer {
 }
 
 section {
-  width: 90vw;
+  width: 80vw;
   margin: 0 auto;
   margin-top: 10vh;
-
-  @media (min-width: 1025px) { // version pour écrans larges
-    width: 80vw;
-  }
+  scroll-margin-top: 10vh;
 }
 
 footer {
@@ -57,5 +57,9 @@ footer {
 a {
   text-decoration: none;
   color: var(--bc-light);
+}
+
+button:hover {
+  cursor: pointer;
 }
 // #endregion liens

@@ -24,16 +24,24 @@
 }
 
 .center {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .center-h {
+  display: flex;
   justify-content: center;
 }
 
 .center-v {
+  display: flex;
   align-items: center;
+}
+
+.grid {
+  display: grid;
+  gap: 1vw;
 }
 // #endregion display
 
@@ -47,6 +55,23 @@
   margin-left: auto;
   right: 0;
 }
+
+.middle {
+  top: 50%;
+  left: 17%;
+  transform: translate(-25%, -50%);
+}
+
+.middle-v {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.middle-h {
+  left: 17%;
+  transform: translateX(-25%);
+}
+
 // #endregion deplacer
 
 // #region tailles
@@ -57,14 +82,24 @@
 .fifty {
   width: 50%;
 }
+
+.thirty {
+  width: 30%;
+}
 // #endregion tailles
 
 // #region variables couleurs
 :root {
-  --black: rgb(34, 32, 30);
+  --black: rgb(18, 15, 12);
+  --dark: rgb(34, 32, 30);
   --grey: rgb(71, 64, 52);
   --white: rgb(132, 129, 112);
   --yellow-main: rgb(216, 181, 76);
   --orange-main: rgb(202, 151, 61);
+  --white-text: rgb(216, 215, 209);
+
+  // 80% opacity
+  --black-80: rgb(18, 15, 12, 0.8);
+  --dark-80: rgb(34, 32, 30, 0.8);
 }
 // #endregion variables couleurs

@@ -4,4 +4,15 @@
 
 #footer {
   background-color: var(--black);
+
+  #foot-socials {
+    gap: 2vw;
+
+    a {
+      img {
+        width: 3vw;
+        height: auto;
+      }
+    }
+  }
 }

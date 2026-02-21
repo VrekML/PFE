@@ -6,24 +6,50 @@
   height: 100vh;
   width: 100vw;
 
+  background-image: url('images/test.png');
+  background-size: cover;
+  background-position: center;
+
   #acc-description {
+    position: relative;
+    height: 100vh;
+    width: 100%;
 
-    img {
-      width: 100vw;
-      height: 100vh;
-      
-      // background-color: var(--black);
+    // jsp pourquoi mais avoir une image de loaded fix la position de #acc-3d
+    img { 
+      z-index: -33331;
+      width: 100%;
+      height: 80%;
+    }
 
-      z-index: 1;
+    #acc-3d {
+      position: absolute;
+      left: 10%;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 30vh;
+      width: 30vw;
+
+      color: var(--white-text);
+      background-color: var(--dark-80);
+
+      z-index: 2;
     }
 
     #acc-text {
-      padding-top: 10vh;
+      padding: 2vh;
+      padding-left: 5vw;
       height: 100vh;
 
-      background-color: rgba(132, 129, 112, 0.8);
+      color: var(--white-text);
+      background-color: var(--black-80);
 
-      z-index: 2
+      z-index: 2;
+
+      h2 {
+        font-size: 9vw;
+        margin-bottom: 5vh;
+      }
     }
   }
 

@@ -9,14 +9,15 @@
   <link rel="stylesheet" href="style.css">
 
   <!-- js -->
-  <!-- <script src=""></script> -->
+  <script src="js/historique.js"></script>
+  <script src="js/galerie.js"></script>
+  <script src="js/carroussel.js"></script>
 </head>
 
 
 <body>
   <header id="header" class="fixed">
     <div class="rangee center">
-      <a href="#accueil"><h1>Arik ML</h1></a>
       <nav id="nav">
         <a href="#accueil">Accueil</a>
         <a href="#demo">Démonstration</a>
@@ -28,9 +29,14 @@
   </header>
 
   <section id="accueil" class="no-marg-top">
-    <div id="acc-description" class="rangee">      
-      <img src="images/old bird in stairs.png" alt="img">
+    <div id="acc-description" class="rangee">  
+      <!-- <img src="images/test.png" alt="s"> -->
+      <div id="acc-3d" class="center">
+        <!-- trouver comment faire du 3JS pour loader le modele simple maybe -->
+         <h2>Possiblement avoir un modele 3D de la map qui tourne</h2>
+      </div>
       <div id="acc-text" class="colonne fifty right absolute">
+        <h2>Nom Projet</h2>
         <p>description du projet</p>
         <p>but du projet</p>
 
@@ -42,79 +48,88 @@
     </div>
   </section>
 
-  <section id="demo">
+  <section id="demo" class="colonne center">
     <h2>Le projet en oeuvre</h2>
-      <!-- trouver comment faire du 3JS pour loader le modele simple maybe -->
-      <!-- trouver comment faire un lecteur video -->
+      <div id="demo-vid"> 
+        <video controls class="center">
+          <source src="videos/roue.mp4" type="video/mp4">
+        </video>
+      </div>
   </section>
 
   <section id="histoire">
     <h2>Le projet en étapes</h2>
-    <!-- formater avec une ligne du temps -->
+    <!-- formater avec une ligne du temps en dessous -->
 
     <div id="historique" class="rangee center-v">
-      <div id="his-bouton" class="absolute center right">
+
+      <div id="his-bouton-l" class="his-bouton absolute center left">
+        <button>gauche</button>
+      </div>
+      <div id="his-bouton-r" class="his-bouton absolute center right">
         <button>droite</button>
       </div>
 
-      <div class="his-etape colonne">
-        <img src="" alt="img">
-        <h3>Debut 1</h3>
-        <p>description de ce qui s'est passé</p>
-      </div>
+      <div id="his-etapes" class="rangee center-v">
+        <div class="his-etape colonne center-v">
+          <img src="images/test.png" alt="img">
+          <h3>Debut 1</h3>
+          <p>description de ce qui s'est passé</p>
+        </div>
 
-      <div class="his-etape colonne">
-        <img src="" alt="img">
-        <h3>Debut 2</h3>
-        <p>description de ce qui s'est passé</p>
-      </div>
+        <div class="his-etape colonne center-v">
+          <img src="images/test.png" alt="img">
+          <h3>Debut 2</h3>
+          <p>description de ce qui s'est passé</p>
+        </div>
 
-      <div class="his-etape colonne">
-        <img src="" alt="img">
-        <h3>Debut 3</h3>
-        <p>description de ce qui s'est passé</p>
-      </div>
+        <div class="his-etape colonne center-v">
+          <img src="images/test.png" alt="img">
+          <h3>Debut 3</h3>
+          <p>description de ce qui s'est passé</p>
+        </div>
 
-      <div class="his-etape colonne">
-        <img src="" alt="img">
-        <h3>Debut 4</h3>
-        <p>description de ce qui s'est passé</p>
-      </div>
+        <div class="his-etape colonne center-v">
+          <img src="images/test.png" alt="img">
+          <h3>Debut 4</h3>
+          <p>description de ce qui s'est passé</p>
+        </div>
 
-      <div class="his-etape colonne">
-        <img src="" alt="img">
-        <h3>Debut 5</h3>
-        <p>description de ce qui s'est passé</p>
-      </div>
+        <div class="his-etape colonne center-v">
+          <img src="images/test.png" alt="img">
+          <h3>Debut 5</h3>
+          <p>description de ce qui s'est passé</p>
+        </div>
 
-      <div class="his-etape colonne">
-        <img src="" alt="img">
-        <h3>Debut 6</h3>
-        <p>description de ce qui s'est passé</p>
-      </div>
+        <div class="his-etape colonne center-v">
+          <img src="images/test.png" alt="img">
+          <h3>Debut 6</h3>
+          <p>description de ce qui s'est passé</p>
+        </div>
 
-      <div class="his-etape colonne">
-        <img src="" alt="img">
-        <h3>Debut 7</h3>
-        <p>description de ce qui s'est passé</p>
+        <div class="his-etape colonne center-v">
+          <img src="images/test.png" alt="img">
+          <h3>Debut 7</h3>
+          <p>description de ce qui s'est passé</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="galerie">
     <h2>Galerie d'images</h2>
-    <div id="gal-imgs">
-      <img src="" alt="img">
-      <img src="" alt="img">
-      <img src="" alt="img">
-      <img src="" alt="img">
-      <img src="" alt="img">
-      <img src="" alt="img">
-      <img src="" alt="img">
+    <div id="gal-imgs" class="grid center">
+      <img src="images/test.png" alt="img">
+      <img src="images/test.png" alt="img">
+      <img src="images/test.png" alt="img">
+      <img src="images/test.png" alt="img">
+      <img src="images/test.png" alt="img">
+      <img src="images/test.png" alt="img">
+      <img src="images/test.png" alt="img">
     </div>
   </section>
 
-  <section id="reflexion" class="colonne">
+  <section id="reflexion" class="colonne center-v">
     <h2>Réflexion sur le projet</h2>
 
     <div id="ref-text">
@@ -129,13 +144,13 @@
 
   <footer id="footer" class="colonne center">
     <div id="foot-socials" class="rangee center">
-      <a href=""><img src="" alt="1"></a>
-      <a href=""><img src="" alt="2"></a>
-      <a href=""><img src="" alt="3"></a>
+      <a href=""><img src="" alt="linkedin"></a>
+      <a href=""><img src="" alt="insta"></a>
+      <a href=""><img src="" alt="idfk"></a>
     </div>
 
     <div id="credits" class="rangee center">
-      <p>Crédits</p>
+      <p>Arik Malenfant-Lacombe, Janvier - Mars 2026</p>
     </div>  
   </footer>
   
