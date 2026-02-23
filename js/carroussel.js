@@ -1,14 +1,16 @@
-// Carousel background image rotation with crossfade effect
+// systeme de carroussel d'images pour la section accueil
 document.addEventListener('DOMContentLoaded', function() {
+  // section accueil
   const accueilSection = document.getElementById('accueil');
+  // pogner les images dans un array
   const images = ['images/test.png', 'images/test2.png', 'images/test3.png'];
   let currentIndex = 0;
 
-  // Create two overlay divs for background image crossfade
+  // faire deux layers d'images pour l'animation de crossfade
   const bgLayer1 = document.createElement('div');
   const bgLayer2 = document.createElement('div');
   
-  // Configure bgLayer1
+  // image de background normale
   bgLayer1.style.position = 'absolute';
   bgLayer1.style.top = '0';
   bgLayer1.style.left = '0';
@@ -22,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
   bgLayer1.style.zIndex = '0';
   bgLayer1.style.pointerEvents = 'none';
 
-  // Configure bgLayer2
+  // image de background 2, pendant l'animation crossfade
   bgLayer2.style.position = 'absolute';
   bgLayer2.style.top = '0';
   bgLayer2.style.left = '0';
@@ -36,27 +38,27 @@ document.addEventListener('DOMContentLoaded', function() {
   bgLayer2.style.zIndex = '0';
   bgLayer2.style.pointerEvents = 'none';
 
-  // Ensure accueil section has position relative
-  if (getComputedStyle(accueilSection).position === 'static') {
-    accueilSection.style.position = 'relative';
-  }
+  // assurer position relative sur la section accueil
+  // if (getComputedStyle(accueilSection).position === 'static') {
+  //   accueilSection.style.position = 'relative';
+  // }
 
-  // Insert background layers at the beginning
+  // placer les images dans la section une premiere fois
   accueilSection.insertBefore(bgLayer1, accueilSection.firstChild);
   accueilSection.insertBefore(bgLayer2, accueilSection.firstChild);
 
-  // Change background image every 5 seconds with crossfade
+  // systeme pour changer l'image a chaque 5 secondes
   setInterval(function() {
     currentIndex = (currentIndex + 1) % images.length;
     
-    // Determine which layer to update
+    // savoir quelle image update
     if (bgLayer1.style.opacity === '1') {
-      // Fade out layer 1, fade in layer 2
+      // Fade out img 1, fade in img 2
       bgLayer2.style.backgroundImage = `url('${images[currentIndex]}')`;
       bgLayer1.style.opacity = '0';
       bgLayer2.style.opacity = '1';
     } else {
-      // Fade out layer 2, fade in layer 1
+      // Fade out img 2, fade in img 1
       bgLayer1.style.backgroundImage = `url('${images[currentIndex]}')`;
       bgLayer2.style.opacity = '0';
       bgLayer1.style.opacity = '1';

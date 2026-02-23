@@ -1,4 +1,4 @@
-// Carousel functionality for histoire section
+// systeme de barre horizontale pour etapes du projet
 document.addEventListener('DOMContentLoaded', function() {
   const historique = document.getElementById('historique');
   const etapesContainer = document.getElementById('his-etapes');
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let currentIndex = 0;
   let itemWidth = 0;
 
-  // Calculate item width based on container and items
+  // calculer largeur de la barre d'historique selon nombre de divisions d'etapes
   function calculateItemWidth() {
     if (etapes[0]) {
       const style = window.getComputedStyle(etapes[0]);
@@ -19,11 +19,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
+  // updater le carousel selon l'index et la largeur de la barre d'historique
   function updateCarousel() {
     const offset = -currentIndex * itemWidth;
     etapesContainer.style.transform = `translateX(${offset}px)`;
   }
 
+  // appuyer sur bouton droite augment l'index et deplace la barre vers la gauche
   btnRight.addEventListener('click', function() {
     if (currentIndex < etapes.length - 1) {
       currentIndex++;
@@ -31,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  // appuyer sur bouton gauche baisse l'index et deplace la barre vers la droite
   btnLeft.addEventListener('click', function() {
     if (currentIndex > 0) {
       currentIndex--;
@@ -38,13 +41,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Initialize carousel with delay to ensure CSS is applied
+  // animation de transition
   etapesContainer.style.transition = 'transform 0.3s ease';
   
   setTimeout(function() {
     calculateItemWidth();
   }, 100);
 
-  // Recalculate on window resize
+  // recalculer largeur de fenetre
   window.addEventListener('resize', calculateItemWidth);
 });

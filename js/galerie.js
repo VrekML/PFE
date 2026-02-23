@@ -1,4 +1,4 @@
-// Gallery popup functionality
+// overlay pour avoir l'image plus grosse dans la galerie d'images
 document.addEventListener('DOMContentLoaded', function() {
   const galleryImages = document.querySelectorAll('#gal-imgs img');
 
@@ -9,40 +9,40 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   function openModal(imageSrc) {
-    // Create overlay
+    // faire division d'overlay
     const overlay = document.createElement('div');
     overlay.id = 'gal-modal-overlay';
     overlay.className = 'gal-overlay';
 
-    // Create modal container
+    // conatiner de l'overlay
     const modal = document.createElement('div');
     modal.className = 'gal-modal';
 
-    // Create close button
+    // bouton pour fermer l'overlay
     const closeBtn = document.createElement('button');
     closeBtn.className = 'gal-close-btn';
     closeBtn.innerHTML = '&times;';
     closeBtn.addEventListener('click', closeModal);
 
-    // Create image element
+    // faire image qui sera dans l'overlay
     const modalImg = document.createElement('img');
     modalImg.src = imageSrc;
     modalImg.className = 'gal-modal-img';
 
-    // Assemble modal
+    // faire l'overlay ("modal")
     modal.appendChild(closeBtn);
     modal.appendChild(modalImg);
     overlay.appendChild(modal);
     document.body.appendChild(overlay);
 
-    // Close modal when clicking overlay background
+    // fermer overlay quand on clique sur le background de l'overlay
     overlay.addEventListener('click', function(e) {
       if (e.target === overlay) {
         closeModal();
       }
     });
 
-    // Close modal with ESC key
+    // fermer overlay avec Escape
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
         closeModal();
@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // systeme pour fermer l'overlay
   function closeModal() {
     const overlay = document.getElementById('gal-modal-overlay');
     const modal = overlay?.querySelector('.gal-modal');
@@ -58,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
       overlay.classList.add('closing');
       modal.classList.add('closing');
       
-      // Wait for animation to complete before removing
+      // attendre la fin de l'animation avant de fermer l'overlay
       setTimeout(() => {
         overlay.remove();
       }, 300);
