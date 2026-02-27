@@ -7,22 +7,24 @@ document.addEventListener('DOMContentLoaded', function() {
   const btnLeft = document.getElementById('his-bouton-l');
 
   let currentIndex = 0;
-  let itemWidth = 0;
+  let itemPercentage = 43; // Desktop: 35vw width + 6vw left margin + 2vw right margin
 
-  // calculer largeur de la barre d'historique selon nombre de divisions d'etapes
-  function calculateItemWidth() {
-    if (etapes[0]) {
-      const style = window.getComputedStyle(etapes[0]);
-      const width = parseFloat(style.width);
-      const marginRight = parseFloat(style.marginRight);
-      itemWidth = width + marginRight;
+  // Calculate item percentage based on screen size
+  function calculateItemPercentage() {
+    if (window.innerWidth <= 768) {
+      itemPercentage = 88; // Mobile: 80vw width + 6vw left margin + 2vw right margin
+    } else {
+      itemPercentage = 43; // Desktop: 35vw width + 6vw left margin + 2vw right margin
     }
+    // Reset to first item when screen size changes
+    currentIndex = 0;
+    updateCarousel();
   }
 
-  // updater le carousel selon l'index et la largeur de la barre d'historique
+  // updater le carousel selon l'index avec percentage responsif
   function updateCarousel() {
-    const offset = -currentIndex * itemWidth;
-    etapesContainer.style.transform = `translateX(${offset}px)`;
+    const offset = -currentIndex * itemPercentage;
+    etapesContainer.style.transform = `translateX(${offset}vw)`;
   }
 
   // appuyer sur bouton droite augment l'index et deplace la barre vers la gauche
@@ -44,10 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // animation de transition
   etapesContainer.style.transition = 'transform 0.3s ease';
   
-  setTimeout(function() {
-    calculateItemWidth();
-  }, 100);
+  // Initialize carousel position
+  calculateItemPercentage();
 
-  // recalculer largeur de fenetre
-  window.addEventListener('resize', calculateItemWidth);
+  // Recalculate on window resize
+  window.addEventListener('resize', calculateItemPercentage);
 });

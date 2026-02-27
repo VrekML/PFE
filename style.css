@@ -4,6 +4,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 *, *::before, *::after {
@@ -41,11 +42,44 @@ footer {
 
 a {
   text-decoration: none;
-  color: var(--bc-light);
+  color: var(--white-text);
+}
+a:hover {
+  color: var(--yellow-main);
+  transition: color 0.2s ease;
 }
 
+button {
+  color: var(--orange-main);
+  text-decoration: none;
+  border: 1px var(--orange-main) solid;
+  border-radius: 5px;
+  background: none;
+  outline: none;
+  padding: 0.5em 1em;
+}
 button:hover {
   cursor: pointer;
+  background-color: var(--yellow-main);
+  color: var(--dark);
+  border: 1px var(--yellow-main) solid;
+  transition: background-color 0.2s ease, color 0.2s ease, border 0.2s ease;
+}
+
+h1, h2, h3 {
+  font-family: var(--font);
+  font-weight: var(--weight-l);
+}
+@media screen and (max-width: 768px) {
+  h1, h2, h3 {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+p {
+  font-family: var(--font);
+  font-weight: var(--weight-m);
 }
 
 /*--------------------------------------------------------------
@@ -129,15 +163,21 @@ button:hover {
 }
 
 :root {
-  --black: rgb(18, 15, 12);
+  --black: rgb(18, 16, 12);
   --dark: rgb(34, 32, 30);
-  --grey: rgb(71, 64, 52);
-  --white: rgb(132, 129, 112);
+  --grey: rgb(46, 42, 33);
+  --white: rgb(122, 117, 100);
   --yellow-main: rgb(216, 181, 76);
   --orange-main: rgb(202, 151, 61);
-  --white-text: rgb(216, 215, 209);
-  --black-80: rgb(18, 15, 12, 0.8);
+  --white-text: rgb(207, 206, 198);
+  --black-80: rgb(18, 16, 12, 0.8);
   --dark-80: rgb(34, 32, 30, 0.8);
+}
+
+:root {
+  --font: "Rubik", sans-serif;
+  --weight-m: 400;
+  --weight-l: 900;
 }
 
 /*--------------------------------------------------------------
@@ -187,7 +227,36 @@ button:hover {
 /*--------------------------------------------------------------
 # Section demo du projet
 --------------------------------------------------------------*/
-#demo-vid video {
+#demo #demo-bouton-l, #demo #demo-bouton-r {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  cursor: pointer;
+  z-index: 1;
+}
+#demo #demo-bouton-l button, #demo #demo-bouton-r button {
+  width: 3vw;
+  height: 3vw;
+  background: none;
+  border: none;
+  padding: 0;
+}
+#demo #demonstrations {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 50vh;
+  transition: transform 0.4s ease-in-out;
+  flex-wrap: nowrap;
+}
+#demo #demonstrations .demo-vid {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#demo #demonstrations .demo-vid video {
   max-width: 70vw;
   max-height: auto;
   width: 60vw;
@@ -199,6 +268,7 @@ button:hover {
 --------------------------------------------------------------*/
 #footer {
   background-color: var(--black);
+  justify-content: space-around;
 }
 #footer #foot-socials {
   gap: 2vw;
@@ -211,17 +281,20 @@ button:hover {
 /*--------------------------------------------------------------
 # Section galerie d'images
 --------------------------------------------------------------*/
-#gal-imgs {
+#galerie .gal-imgs img {
+  max-width: 20vw;
+}
+
+.gal-imgs {
   max-width: 100%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-#gal-imgs img {
-  max-width: 20vw;
+.gal-imgs img {
   height: auto;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
-#gal-imgs img:hover {
+.gal-imgs img:hover {
   transform: scale(1.05);
 }
 
@@ -319,17 +392,28 @@ button:hover {
     opacity: 0;
   }
 }
+@media (max-width: 768px) {
+  #gal-imgs {
+    grid-template-columns: 1fr 1fr;
+  }
+  #gal-imgs img {
+    max-width: 40vw;
+  }
+}
 /*--------------------------------------------------------------
 # Section header
 --------------------------------------------------------------*/
 #header {
   width: 100vw;
   height: 5vh;
-  background-color: var(--white);
+  background-color: var(--black-80);
   z-index: 1000;
 }
 #header div {
   height: 100%;
+}
+#header div nav {
+  gap: 2vw;
 }
 
 /*--------------------------------------------------------------
@@ -342,16 +426,28 @@ button:hover {
   padding-left: 10vw;
 }
 #histoire #his-bouton-l, #histoire #his-bouton-r {
-  background-color: var(--white);
+  height: 80%;
+  background-color: var(--black-80);
 }
 #histoire #his-bouton-l button, #histoire #his-bouton-r button {
   background: none;
   border: none;
   padding: 0;
   margin: 0;
+  width: 3vw;
+  height: 100%;
+}
+#histoire #his-bouton-l button img, #histoire #his-bouton-r button img {
+  height: auto;
 }
 #histoire .his-bouton {
   z-index: 3;
+}
+#histoire #his-bouton-l {
+  border-radius: 0 10px 10px 0;
+}
+#histoire #his-bouton-r {
+  border-radius: 10px 0 0 10px;
 }
 #histoire button:hover {
   cursor: pointer;
@@ -367,11 +463,12 @@ button:hover {
 }
 #histoire #historique #his-etapes .his-etape {
   margin-right: 2vw;
-  margin-left: 3vw;
-  width: 25vw;
-  height: 50vh;
+  margin-left: 6vw;
+  width: 35vw;
+  height: 70vh;
   padding-top: 2vh;
   flex-shrink: 0;
+  border-radius: 10px;
   background-color: var(--grey);
 }
 #histoire #historique #his-etapes .his-etape img {
@@ -380,6 +477,15 @@ button:hover {
   background-color: var(--grey);
 }
 
+@media screen and (max-width: 768px) {
+  #histoire #his-bouton-l button, #histoire #his-bouton-r button {
+    width: 5vw;
+    height: 100%;
+  }
+  #histoire #historique #his-etapes .his-etape {
+    width: 80vw;
+  }
+}
 /*--------------------------------------------------------------
 # Section reflexion finale
 --------------------------------------------------------------*//*# sourceMappingURL=style.css.map */

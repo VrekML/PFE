@@ -1,6 +1,6 @@
 // overlay pour avoir l'image plus grosse dans la galerie d'images
 document.addEventListener('DOMContentLoaded', function() {
-  const galleryImages = document.querySelectorAll('#gal-imgs img');
+  const galleryImages = document.querySelectorAll('.gal-imgs img');
 
   galleryImages.forEach(img => {
     img.addEventListener('click', function() {

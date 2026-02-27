@@ -88,18 +88,26 @@
 }
 // #endregion tailles
 
-// #region variables couleurs
+// #region couleurs
 :root {
-  --black: rgb(18, 15, 12);
+  --black: rgb(18, 16, 12);
   --dark: rgb(34, 32, 30);
-  --grey: rgb(71, 64, 52);
-  --white: rgb(132, 129, 112);
+  --grey: rgb(46, 42, 33);
+  --white: rgb(122, 117, 100);
   --yellow-main: rgb(216, 181, 76);
   --orange-main: rgb(202, 151, 61);
-  --white-text: rgb(216, 215, 209);
+  --white-text: rgb(207, 206, 198);
 
   // 80% opacity
-  --black-80: rgb(18, 15, 12, 0.8);
+  --black-80: rgb(18, 16, 12, 0.8);
   --dark-80: rgb(34, 32, 30, 0.8);
 }
 // #endregion variables couleurs
+
+// #region font
+:root {
+  --font: "Rubik", sans-serif;
+  --weight-m: 400;
+  --weight-l: 900;
+}
+// #endregion font

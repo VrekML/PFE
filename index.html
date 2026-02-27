@@ -7,18 +7,23 @@
 
   <!-- css -->
   <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+  </style>
 
   <!-- js -->
   <script src="js/historique.js"></script>
   <script src="js/galerie.js"></script>
   <script src="js/carroussel.js"></script>
+  <script src="js/demo.js"></script>
 </head>
 
 
 <body>
   <header id="header" class="fixed">
     <div class="rangee center">
-      <nav id="nav">
+      <nav id="nav" class="rangee center">
         <a href="#accueil">Accueil</a>
         <a href="#demo">Démonstration</a>
         <a href="#histoire">Histoire</a>
@@ -50,10 +55,35 @@
 
   <section id="demo" class="colonne center">
     <h2>Le projet en oeuvre</h2>
-      <div id="demo-vid"> 
-        <video controls class="center">
-          <source src="videos/roue.mp4" type="video/mp4">
-        </video>
+
+      <div id="demo-bouton-l" class="demo-bouton absolute center left">
+        <button class="rangee center"><img src="images/left.png" alt="flèche gauche"></button>
+      </div>
+      <div id="demo-bouton-r" class="demo-bouton absolute center right">
+        <button class="rangee center"><img src="images/right.png" alt="flèche droite"></button>
+      </div>
+
+      <div id="demonstrations" class="rangee center">
+        <div class="demo-vid colonne center"> 
+          <h3>Projet en jeu</h3>
+          <video controls class="center">
+            <source src="videos/roue.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="demo-vid colonne center"> 
+          <h3>Projet en jeu 2</h3>
+          <video controls class="center">
+            <source src="videos/roue.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="demo-vid colonne center"> 
+          <h3>Projet en jeu 3</h3>
+          <video controls class="center">
+            <source src="videos/roue.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
   </section>
 
@@ -64,50 +94,50 @@
     <div id="historique" class="rangee center-v">
 
       <div id="his-bouton-l" class="his-bouton absolute center left">
-        <button>gauche</button>
+        <button class="rangee center"><img src="images/left.png" alt="flèche gauche"></button>
       </div>
       <div id="his-bouton-r" class="his-bouton absolute center right">
-        <button>droite</button>
+        <button class="rangee center"><img src="images/right.png" alt="flèche droite"></button>
       </div>
 
       <div id="his-etapes" class="rangee center-v">
-        <div class="his-etape colonne center-v">
+        <div class="gal-imgs his-etape colonne center-v">
           <img src="images/test.png" alt="img">
           <h3>Debut 1</h3>
           <p>description de ce qui s'est passé</p>
         </div>
 
-        <div class="his-etape colonne center-v">
+        <div class="gal-imgs his-etape colonne center-v">
           <img src="images/test.png" alt="img">
           <h3>Debut 2</h3>
           <p>description de ce qui s'est passé</p>
         </div>
 
-        <div class="his-etape colonne center-v">
+        <div class="gal-imgs his-etape colonne center-v">
           <img src="images/test.png" alt="img">
           <h3>Debut 3</h3>
           <p>description de ce qui s'est passé</p>
         </div>
 
-        <div class="his-etape colonne center-v">
+        <div class="gal-imgs his-etape colonne center-v">
           <img src="images/test.png" alt="img">
           <h3>Debut 4</h3>
           <p>description de ce qui s'est passé</p>
         </div>
 
-        <div class="his-etape colonne center-v">
+        <div class="gal-imgs his-etape colonne center-v">
           <img src="images/test.png" alt="img">
           <h3>Debut 5</h3>
           <p>description de ce qui s'est passé</p>
         </div>
 
-        <div class="his-etape colonne center-v">
+        <div class="gal-imgs his-etape colonne center-v">
           <img src="images/test.png" alt="img">
           <h3>Debut 6</h3>
           <p>description de ce qui s'est passé</p>
         </div>
 
-        <div class="his-etape colonne center-v">
+        <div class="gal-imgs his-etape colonne center-v">
           <img src="images/test.png" alt="img">
           <h3>Debut 7</h3>
           <p>description de ce qui s'est passé</p>
@@ -118,7 +148,7 @@
 
   <section id="galerie">
     <h2>Galerie d'images</h2>
-    <div id="gal-imgs" class="grid center">
+    <div class="gal-imgs grid center">
       <img src="images/test.png" alt="img">
       <img src="images/test.png" alt="img">
       <img src="images/test.png" alt="img">

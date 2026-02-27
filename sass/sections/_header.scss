@@ -6,11 +6,15 @@
   width: 100vw;
   height: 5vh;
 
-  background-color: var(--white);
+  background-color: var(--black-80);
 
   z-index: 1000;
 
   div {
     height: 100%;
+
+    nav {
+      gap: 2vw;
+    }
   }
 }

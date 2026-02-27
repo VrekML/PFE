@@ -2,13 +2,20 @@
 # Section galerie d'images
 --------------------------------------------------------------*/
 
-#gal-imgs {
+#galerie {
+  .gal-imgs {
+    img {
+      max-width: 20vw;
+    }
+  };
+}
+
+.gal-imgs {
   max-width: 100%;
 
   grid-template-columns: 1fr 1fr 1fr 1fr;
 
   img {
-    max-width: 20vw;
     height: auto;
     cursor: pointer;
     transition: transform 0.2s ease;
@@ -125,3 +132,13 @@
   }
 }
 // #endregion fonctionnement gallerie
+
+@media (max-width: 768px) {
+  #gal-imgs {
+    grid-template-columns: 1fr 1fr;
+
+    img {
+      max-width: 40vw;
+    }
+  }
+}
