@@ -393,10 +393,10 @@ p {
   }
 }
 @media (max-width: 768px) {
-  .gal-imgs {
+  #galerie .gal-imgs {
     grid-template-columns: 1fr 1fr;
   }
-  .gal-imgs img {
+  #galerie .gal-imgs img {
     max-width: 40vw;
   }
 }
