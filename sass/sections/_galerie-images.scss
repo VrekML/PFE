@@ -134,7 +134,7 @@
 // #endregion fonctionnement gallerie
 
 @media (max-width: 768px) {
-  #gal-imgs {
+  .gal-imgs {
     grid-template-columns: 1fr 1fr;
 
     img {
