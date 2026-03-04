@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let currentIndex = 0;
   let itemPercentage = 43; // Desktop: 35vw width + 6vw left margin + 2vw right margin
 
-  // Calculate item percentage based on screen size
+  // calculer largeur de l'item selon taille de l'ecran
   function calculateItemPercentage() {
     if (window.innerWidth <= 768) {
       itemPercentage = 88; // Mobile: 80vw width + 6vw left margin + 2vw right margin

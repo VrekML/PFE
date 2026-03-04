@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let currentIndex = 0;
   const totalDemos = demoBtns.length;
   
-  // Update carousel position by translating the entire container
+  // bouger la div du carroussel pour montrer la bonne video
   function updateCarousel() {
     const offset = -currentIndex * 100;
     demonstrations.style.transform = `translateX(${offset}%)`;
@@ -25,6 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCarousel();
   });
   
-  // Initialize carousel position
+  // updater caroussel
   updateCarousel();
 });

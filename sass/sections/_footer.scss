@@ -11,8 +11,22 @@
 
     a {
       img {
-        width: 3vw;
+        width: 2vw;
         height: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #footer {
+
+    #foot-socials {
+
+      a {
+        img {
+          width: 3.5vw;
+        }
       }
     }
   }

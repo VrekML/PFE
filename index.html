@@ -35,17 +35,14 @@
 
   <section id="accueil" class="no-marg-top">
     <div id="acc-description" class="rangee">  
-      <!-- <img src="images/test.png" alt="s"> -->
-      <div id="acc-3d" class="center">
-        <!-- trouver comment faire du 3JS pour loader le modele simple maybe -->
-         <h2>Possiblement avoir un modele 3D de la map qui tourne</h2>
-      </div>
       <div id="acc-text" class="colonne fifty right absolute">
-        <h2>Nom Projet</h2>
-        <p>description du projet</p>
-        <p>but du projet</p>
+        <h2>Sweatshop Fumes</h2>
+        <div class="colonne">
+          <p>Je cherchais à apprendre la création d'animations et connaitre l'utilité de chaque fenêtre d'animation dans Blender</p>
+          <p>Donc, j'ai décidé de créer un environnement de course pour le jeu Mario Kart Wii qui est jouable, contenant des objets et des textures animées.</p>
+        </div>
 
-        <div id="acc-btns">
+        <div id="acc-btns" class="rangee">
           <a href="#demo"><button>Voir le projet</button></a>
           <a href=""><button>Télécharger le projet</button></a>
         </div>
@@ -56,33 +53,56 @@
   <section id="demo" class="colonne center">
     <h2>Le projet en oeuvre</h2>
 
-      <div id="demo-bouton-l" class="demo-bouton absolute center left">
-        <button class="rangee center"><img src="images/left.png" alt="flèche gauche"></button>
-      </div>
-      <div id="demo-bouton-r" class="demo-bouton absolute center right">
-        <button class="rangee center"><img src="images/right.png" alt="flèche droite"></button>
-      </div>
-
-      <div id="demonstrations" class="rangee center">
-        <div class="demo-vid colonne center"> 
-          <h3>Projet en jeu</h3>
-          <video controls class="center">
-            <source src="videos/roue.mp4" type="video/mp4">
-          </video>
+      <div class="rangee center">
+        <div id="demo-bouton-l" class="demo-bouton absolute center left">
+          <button class="rangee center"><img src="images/left.png" alt="flèche gauche"></button>
+        </div>
+        <div id="demo-bouton-r" class="demo-bouton absolute center right">
+          <button class="rangee center"><img src="images/right.png" alt="flèche droite"></button>
         </div>
 
-        <div class="demo-vid colonne center"> 
-          <h3>Projet en jeu 2</h3>
-          <video controls class="center">
-            <source src="videos/roue.mp4" type="video/mp4">
-          </video>
-        </div>
+        <div id="demonstrations" class="rangee center">
+          <div class="demo-vid colonne center"> 
+            <h3>Projet en jeu</h3>
+            <video controls class="center">
+              <source src="videos/roue.mp4" type="video/mp4">
+            </video>
+          </div>
 
-        <div class="demo-vid colonne center"> 
-          <h3>Projet en jeu 3</h3>
-          <video controls class="center">
-            <source src="videos/roue.mp4" type="video/mp4">
-          </video>
+          <div class="demo-vid colonne center"> 
+            <h3>Vue wireframe</h3>
+            <video controls class="center">
+              <source src="videos/roue.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="demo-vid colonne center"> 
+            <h3>Projet dans Blender</h3>
+            <video controls class="center">
+              <source src="videos/roue.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="demo-vid colonne center"> 
+            <h3>Animations</h3>
+            <video controls class="center">
+              <source src="videos/roue.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="demo-vid colonne center"> 
+            <h3>Intégration</h3>
+            <video controls class="center">
+              <source src="videos/roue.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="demo-vid colonne center"> 
+            <h3>Site web - Programmation</h3>
+            <video controls class="center">
+              <source src="videos/roue.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
       </div>
   </section>
@@ -102,45 +122,57 @@
 
       <div id="his-etapes" class="rangee center-v">
         <div class="gal-imgs his-etape colonne center-v">
-          <img src="images/test.png" alt="img">
-          <h3>Debut 1</h3>
-          <p>description de ce qui s'est passé</p>
+          <img src="images/etapes/etape1.png" alt="img">
+          <h3>Le modèle simple</h3>
+          <p>J'ai passé la première semaine à modéliser l'environnement de base.</p>
         </div>
 
         <div class="gal-imgs his-etape colonne center-v">
-          <img src="images/test.png" alt="img">
-          <h3>Debut 2</h3>
-          <p>description de ce qui s'est passé</p>
+          <img src="images/etapes/etape2.png" alt="img">
+          <h3>Les textures animées</h3>
+          <p>Avec Aseprite, j'ai créé des textures qui seront animées avec les outils d'intégration. Je peux créer une animation de type PAT pour faire changer le materiel de "steam1" à steam2, 3, en boucle.</p>
+          <p>L'animation de convoyeur (texture grise) a été faite avec une animation de type SRT, qui déplace les UVs sur la texture, en boucle.</p>
         </div>
 
         <div class="gal-imgs his-etape colonne center-v">
-          <img src="images/test.png" alt="img">
-          <h3>Debut 3</h3>
-          <p>description de ce qui s'est passé</p>
+          <img src="images/etapes/etape3.png" alt="img">
+          <h3>Les objets animées</h3>
+          <p>Avec les fenêtres de "dope sheet", "graph editor" et "nonlinear animation", j'ai pu animer les "bones" d'un objet et le bake dans le modèle directement. J'ai fait une roue d'engrenage et un pillier qui tombe, qui devient une rampe plus tard.</p>
+          <p>Le jeu interprète ensuite ça comme un CHR animation (character animation.)</p>
+          <p>C'était le gros de mon apprentissage.</p>
         </div>
 
         <div class="gal-imgs his-etape colonne center-v">
-          <img src="images/test.png" alt="img">
-          <h3>Debut 4</h3>
-          <p>description de ce qui s'est passé</p>
+          <img src="images/etapes/etape4.png" alt="img">
+          <h3>La décoration</h3>
+          <p>J'ai créé des objets "prefabs" que je pouvais ensuite coller un peu partout sur la carte</p>
+          <p>Certains objets ont une version high-poly et une version low-poly. La version high-poly a été utile pour créer des textures de haute qualité sur Substance 3D Painter, que je pouvais ensuite coller sur un modèle mieux adapté aux limitations de la console et du jeu.</p>
         </div>
 
         <div class="gal-imgs his-etape colonne center-v">
-          <img src="images/test.png" alt="img">
-          <h3>Debut 5</h3>
-          <p>description de ce qui s'est passé</p>
+          <img src="images/etapes/etape5.png" alt="img">
+          <h3>Le ciel</h3>
+          <p>Avec BrawlCrate, outil d'intégration, j'ai créé un array de couleurs qui sont appliqués dans le modèle de ciel. C'est dans les teintes de brun pour montrer que l'endroit est pollué.</p>
         </div>
 
         <div class="gal-imgs his-etape colonne center-v">
-          <img src="images/test.png" alt="img">
-          <h3>Debut 6</h3>
-          <p>description de ce qui s'est passé</p>
+          <img src="images/etapes/etape7.png" alt="img">
+          <h3>Un dernier objet animé</h3>
+          <p>Mauvaise nouvelle: le jeu limite énormément la taille d'un fichier de course. Tout autre animation ou objet complexe que je voulais créer était trop gros pour le jeu...</p>
+          <p>J'ai dû m'adapter, le seul autre objet que j'ai réussi à faire était une boite avec une rotation fixe et courte.</p>
         </div>
 
         <div class="gal-imgs his-etape colonne center-v">
-          <img src="images/test.png" alt="img">
-          <h3>Debut 7</h3>
-          <p>description de ce qui s'est passé</p>
+          <img src="images/etapes/etape8.png" alt="img">
+          <h3>L'intégration en jeu</h3>
+          <p>Pour intégrer le modèle dans le jeu, j'ai dû bake les lumières de Blender dans des textures qui sont mélangées avec les textures normales et faire un fichier pour les collisions.</p>
+          <p>J'ai aussi dû faire un fichier .KMP, où j'ai créé des routes pour les objets et les joueurs ordinateurs, les "checkpoints" qui permettent de compter ton nombre de tours et les points de respawn quand tu tombes dans le vide. C'est aussi avec ce fichier que j'ai placé mes objets externes comme la roue d'engrenage.</p>
+        </div>
+
+        <div class="gal-imgs his-etape colonne center-v">
+          <img src="images/etapes/etape9.png" alt="img">
+          <h3>Le beau site web</h3>
+          <p>Pour présenter ce projet, j'ai créé cette magnifique page web, contenant des caroussels avec JavaScript afin de prouver que je suis le meilleur programmeur au monde.</p>
         </div>
       </div>
     </div>
@@ -149,13 +181,17 @@
   <section id="galerie">
     <h2>Galerie d'images</h2>
     <div class="gal-imgs grid center">
-      <img src="images/test.png" alt="img">
-      <img src="images/test.png" alt="img">
-      <img src="images/test.png" alt="img">
-      <img src="images/test.png" alt="img">
-      <img src="images/test.png" alt="img">
-      <img src="images/test.png" alt="img">
-      <img src="images/test.png" alt="img">
+      <img src="images/outside.png" alt="img">
+      <img src="images/start.png" alt="img">
+      <img src="images/choice.png" alt="img">
+      <img src="images/bridge.png" alt="img">
+      <img src="images/bridge-end.png" alt="img">
+      <img src="images/inside.png" alt="img">
+      <img src="images/inside2.png" alt="img">
+      <img src="images/inside3.png" alt="img">
+      <img src="images/cylinder.png" alt="img">
+      <img src="images/red.png" alt="img">
+      <img src="images/red2.png" alt="img">
     </div>
   </section>
 
@@ -163,8 +199,8 @@
     <h2>Réflexion sur le projet</h2>
 
     <div id="ref-text">
-      <p>Ce que j'ai appris</p>
-      <p>Ce que j'aurais pu faire mieux</p>
+      <p>J'ai réussis à apprendre comment animer avec Blender, donc ce projet est un succès!</p>
+      <p>Par contre, ce projet contient très peu d'animations à cause des limitations du jeu. Si j'avais à refaire un projet afin d'apprendre l'animation dans Blender, je ferais autre chose entièrement qui me donnerait plus de liberté pour créer des animations. Peut être une courte animation de personnage? Un projet de posing? Je ne sais pas, honnêtement.</p>
     </div>
 
     <div id="ref-button">
@@ -174,13 +210,13 @@
 
   <footer id="footer" class="colonne center">
     <div id="foot-socials" class="rangee center">
-      <a href=""><img src="" alt="linkedin"></a>
-      <a href=""><img src="" alt="insta"></a>
-      <a href=""><img src="" alt="idfk"></a>
+      <a href="https://www.behance.net/arikml" target="_blank"><img src="https://s2.svgbox.net/social.svg?ic=behance&color=fff" alt="behance"></a>
+      <a href="https://www.instagram.com/arik_ml.art" target="_blank"><img src="https://s2.svgbox.net/social.svg?ic=instagram&color=fff" alt="instagram"></a>
+      <a href="https://www.linkedin.com/in/arikmlacombe/" target="_blank"><img src="https://s2.svgbox.net/social.svg?ic=linkedin&color=fff" alt="linkedin"></a>
     </div>
 
-    <div id="credits" class="rangee center">
-      <p>Arik Malenfant-Lacombe, Janvier - Mars 2026</p>
+    <div id="credits" class="colonne center">
+      <p>Arik Malenfant-Lacombe | janvier - mars 2026</p>
     </div>  
   </footer>
   

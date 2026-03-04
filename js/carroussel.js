@@ -3,8 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
   // section accueil
   const accueilSection = document.getElementById('accueil');
   // pogner les images dans un array
-  const images = ['images/test.png', 'images/test2.png', 'images/test3.png'];
+  const images = ['images/outside-acc.png', 'images/choice-acc.png', 'images/inside-acc.png'];
   let currentIndex = 0;
+
+  // fonction pour determiner la position du background en fonction de la taille de l'écran
+  function getBackgroundPosition() {
+    return window.innerWidth <= 768 ? '20%' : 'center';
+  }
 
   // faire deux layers d'images pour l'animation de crossfade
   const bgLayer1 = document.createElement('div');
@@ -17,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
   bgLayer1.style.width = '100%';
   bgLayer1.style.height = '100%';
   bgLayer1.style.backgroundSize = 'cover';
-  bgLayer1.style.backgroundPosition = 'center';
+  bgLayer1.style.backgroundPosition = getBackgroundPosition();
   bgLayer1.style.backgroundImage = `url('${images[0]}')`;
   bgLayer1.style.transition = 'opacity 0.5s ease';
   bgLayer1.style.opacity = '1';
@@ -31,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
   bgLayer2.style.width = '100%';
   bgLayer2.style.height = '100%';
   bgLayer2.style.backgroundSize = 'cover';
-  bgLayer2.style.backgroundPosition = 'center';
+  bgLayer2.style.backgroundPosition = getBackgroundPosition();
   bgLayer2.style.backgroundImage = `url('${images[1]}')`;
   bgLayer2.style.transition = 'opacity 0.5s ease';
   bgLayer2.style.opacity = '0';
@@ -64,4 +69,11 @@ document.addEventListener('DOMContentLoaded', function() {
       bgLayer1.style.opacity = '1';
     }
   }, 5000);
+
+  // update background position quand la taille de l'écran change
+  window.addEventListener('resize', function() {
+    const position = getBackgroundPosition();
+    bgLayer1.style.backgroundPosition = position;
+    bgLayer2.style.backgroundPosition = position;
+  });
 });
