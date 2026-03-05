@@ -6,9 +6,10 @@
 ### Setup de la course
 - Avoir Dolphin Emulator
 - Avoir Mario Kart Wii dans cet emulateur
-- 
-
-
+- Avoir un patch Riivolution qui permet de loader ce que tu veux en jeu (MyStuff)
+  - Placer Riivolution patch dans Dolphin (File -> Open User Folder -> \Load\Riivolution)
+- Déposer le fichier .szs dans ce dossier MyStuff
+- Ouvrir le jeu avec Riivolution patches (click droit sur Mario Kart Wii -> Start with Riivolution patches -> Open Riivolution XML... -> "enable" le mystuff folder et le patch riivolution)
 
 ### Liste de tout ce que j'ai créé dans le projet (plus gros à plus petit):
 - Modèle 3D de la map
@@ -21,9 +22,7 @@
 - Certaines textures (objets décoratifs): crate, liught, machine, poubelle
 - Fichier de course (intégration): course.kcl, course.kmp, course_model.brres, dc_pillar.brres, dc_pillar.kcl, dc_pillar_base.kcl, DemoCol.brres, DemoCol.kcl, DKrockGC.brres, map_model.brres, vcorn_model.brres
 - Site web de présentation (tout)
-
 - Autres objets personnalisés que je n'ai pas pu intégrer: Central Machine, Falling Crates
-
 
 <p>Arik Malenfant-Lacombe</p>
 <p></p>Janvier - mars 2026</p>
