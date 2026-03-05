@@ -2,6 +2,6 @@
 Arik Malenfant-Lacombe
 
 Création d'une course personalisée pour le jeu vidéo Mario Kart Wii
-Création d'une page web de présentation
+\n Création d'une page web de présentation
 
 Janvier - mars 2026
