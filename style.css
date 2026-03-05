@@ -186,7 +186,7 @@ p {
 #accueil {
   height: 100vh;
   width: 100vw;
-  background-image: url("images/test.png");
+  background-image: url("images/accueil/outside-acc.png");
   background-size: cover;
   background-position: center;
 }
@@ -381,7 +381,7 @@ p {
   border-radius: 10px;
   border: none;
   font-size: 40px;
-  color: white;
+  color: var(--white-text);
   transition: transform 0.2s ease;
 }
 .gal-close-btn:hover {
