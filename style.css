@@ -362,6 +362,7 @@ p {
 
 .gal-modal-img {
   max-width: 80vw;
+  width: 70vw;
   max-height: 80vh;
   object-fit: contain;
 }
