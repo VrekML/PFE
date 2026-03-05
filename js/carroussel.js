@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // section accueil
   const accueilSection = document.getElementById('accueil');
   // pogner les images dans un array
-  const images = ['images/outside-acc.png', 'images/choice-acc.png', 'images/inside-acc.png'];
+  const images = ['images/accueil/outside-acc.png', 'images/accueil/choice-acc.png', 'images/accueil/inside-acc.png'];
   let currentIndex = 0;
 
   // fonction pour determiner la position du background en fonction de la taille de l'écran
